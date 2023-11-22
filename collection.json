@@ -10,7 +10,13 @@
 			"name": "myForm",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
 			},
 			"response": []
 		},
@@ -80,7 +86,17 @@
 			"name": "myPut",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"note\": \"updateNote\"\r\n}"
+				},
 				"url": {
 					"raw": "{{url}}/notes/You'r",
 					"host": [
